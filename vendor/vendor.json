@@ -59,6 +59,12 @@
 			"revisionTime": "2019-03-10T12:17:21Z"
 		},
 		{
+			"checksumSHA1": "eECxSkwh0WmhLwaxHfkvcLOWS08=",
+			"path": "github.com/jinzhu/gorm/dialects/mysql",
+			"revision": "8b07437717e71c2ff00602ae19f8353ba10aafbb",
+			"revisionTime": "2019-03-10T12:17:21Z"
+		},
+		{
 			"checksumSHA1": "4eelJOSLZoDzLuaJvgilOBVNovU=",
 			"path": "github.com/jinzhu/inflection",
 			"revision": "04140366298a54a039076d798123ffa108fff46c",
@@ -93,6 +99,12 @@
 			"path": "github.com/ugorji/go/codec",
 			"revision": "2dc34c0b87808deb8e2c69e1625db4c14e5d0d4a",
 			"revisionTime": "2019-03-20T09:00:25Z"
+		},
+		{
+			"checksumSHA1": "GtamqiJoL7PGHsN454AoffBFMa8=",
+			"path": "golang.org/x/net/context",
+			"revision": "addf6b3196f61cd44ce5a76657913698c73479d0",
+			"revisionTime": "2019-03-22T03:00:09Z"
 		},
 		{
 			"checksumSHA1": "XJ4TterqeY89DOiG5um1kkilZZw=",
