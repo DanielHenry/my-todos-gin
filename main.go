@@ -2,9 +2,10 @@
 package main
 
 import (
+	"fmt"
+	"os"
 	"net/http"
 	"strconv"
-	"context"
 
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
@@ -14,9 +15,16 @@ import (
 var db *gorm.DB
 
 func init() {
+	dbuser := os.Getenv("MY_TODOS_GIN_DB_USER")
+	dbpass := os.Getenv("MY_TODOS_GIN_DB_PASS")
+	dbprotocol := os.Getenv("MY_TODOS_GIN_DB_PROTOCOL")
+	dbhost := os.Getenv("MY_TODOS_GIN_DB_HOST")
+	dbport := os.Getenv("MY_TODOS_GIN_DB_PORT")
+	dbdatabase := os.Getenv("MY_TODOS_GIN_DB_DATABASE")
+	dbconfig := fmt.Sprintf("%s:%s@%s(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", dbuser, dbpass, dbprotocol, dbhost, dbport, dbdatabase)
 	//open a db connection
 	var err error
-	db, err = gorm.Open("mysql", "username:password@protocol(host:port)/database_name?charset=utf8&parseTime=True&loc=Local")
+	db, err = gorm.Open("mysql", dbconfig)
 	if err != nil {
 		panic("failed to connect database")
 	}
